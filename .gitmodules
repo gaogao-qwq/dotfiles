@@ -1,3 +1,3 @@
 [submodule "nvim"]
 	path = .config/nvim
-	url = https://github.com/gaogao-qwq/nvim.git
+	url = https://github.com/gaogao-qwq/nvim
