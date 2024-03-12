@@ -12,6 +12,7 @@ make reinstall  # reinstall
 ```
 
 > Directory
+
 ```Plaintext
 .
 ├── dwm             -- dwm source
