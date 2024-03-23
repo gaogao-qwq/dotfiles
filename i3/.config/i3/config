@@ -35,6 +35,8 @@ exec_always --no-startup-id /usr/lib/pam_kwallet_init
 # run kde polkit agent
 exec_always --no-startup-id /usr/lib/polkit-kde-authentication-agent-1
 
+exec_always --no-startup-id dunst -conf ~/scripts/config/dunst.conf
+
 # set wallpaper
 exec --no-startup-id feh --bg-fill ~/Pictures/wallpaper/112926752_p0.jpg ~/Pictures/wallpaper/114250707_p0.jpg
 
