@@ -34,8 +34,10 @@ exec --no-startup-id cfw
 exec_always --no-startup-id /usr/lib/pam_kwallet_init
 # run kde polkit agent
 exec_always --no-startup-id /usr/lib/polkit-kde-authentication-agent-1
-
+# run dunst notification daemon
 exec_always --no-startup-id dunst -conf ~/scripts/config/dunst.conf
+# run flameshot screenshot utility
+exec_always --no-startup-id flameshot
 
 # set wallpaper
 exec --no-startup-id feh --bg-fill ~/Pictures/wallpaper/112926752_p0.jpg ~/Pictures/wallpaper/114250707_p0.jpg
@@ -43,8 +45,8 @@ exec --no-startup-id feh --bg-fill ~/Pictures/wallpaper/112926752_p0.jpg ~/Pictu
 # change wallpaper
 # bindsym $mod+Shift+w exec --no-startup-id feh --randomize --bg-fill ~/Pictures/wallpaper
 
-# Screenshot selection to clipboard
-bindsym $mod+Shift+s exec --no-startup-id maim --select | xclip -selection clipboard -t image/png
+# open flameshot gui
+bindsym $mod+Shift+s exec --no-startup-id flameshot gui
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
