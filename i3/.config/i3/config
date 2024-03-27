@@ -47,6 +47,8 @@ exec --no-startup-id feh --bg-fill ~/Pictures/wallpaper/112926752_p0.jpg ~/Pictu
 
 # open flameshot gui
 bindsym $mod+Shift+s exec --no-startup-id flameshot gui
+# open boomer the zoomer
+bindsym $mod+Shift+z exec --no-startup-id boomer
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
