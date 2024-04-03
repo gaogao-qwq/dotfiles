@@ -1,5 +1,6 @@
 eval $(thefuck --alias)
-alias cl=clear
+alias flutter="fvm flutter"
+alias cl="clear"
 alias pbcopy="xclip -selection c"
 alias pbpaste="xclip -selection c -o"
 
