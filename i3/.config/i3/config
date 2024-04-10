@@ -40,7 +40,7 @@ exec_always --no-startup-id dunst -conf ~/scripts/config/dunst.conf
 exec_always --no-startup-id flameshot
 
 # set wallpaper
-exec --no-startup-id feh --bg-fill ~/Pictures/wallpaper/112926752_p0.jpg ~/Pictures/wallpaper/114934269_p0.jpg
+exec --no-startup-id feh --bg-fill ~/Pictures/wallpaper/114934269_p0.jpg ~/Pictures/wallpaper/114250707_p0.jpg
 
 # change wallpaper
 # bindsym $mod+Shift+w exec --no-startup-id feh --randomize --bg-fill ~/Pictures/wallpaper
