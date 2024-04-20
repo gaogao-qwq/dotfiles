@@ -27,8 +27,11 @@ exec --no-startup-id bluetoothctl power on
 # Startup applications
 exec_always --no-startup-id fcitx5
 exec_always --no-startup-id clipcatd
-exec_always --no-startup-id clipcatd
+# run compositor
+exec_always --no-startup-id picom
 exec --no-startup-id cfw
+# load nvidia settings
+exec --no-startup-id nvidia-settings --load-config-only
 
 # unlock kwallet
 exec_always --no-startup-id /usr/lib/pam_kwallet_init
