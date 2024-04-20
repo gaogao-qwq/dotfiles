@@ -1,4 +1,4 @@
-DOTFILES := dwm emacs i3 i3status kitty nvim scripts st tmux vim zsh
+DOTFILES := dwm emacs i3 i3status kitty nvim scripts st tmux vim zsh picom
 
 ALL: reinstall
 
