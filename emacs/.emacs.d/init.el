@@ -21,4 +21,8 @@
  '(frame-background-mode 'light))
 ;; 设置字体
 (add-to-list 'default-frame-alist
-             '(font . "Maple Mono-14"))
+             '(font . "Maple Mono-12"))
+
+(global-set-key (kbd "C-c l") #'org-store-link)
+(global-set-key (kbd "C-c a") #'org-agenda)
+(global-set-key (kbd "C-c c") #'org-capture)
