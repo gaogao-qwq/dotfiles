@@ -1,12 +1,13 @@
 eval $(thefuck --alias)
 alias flutter="fvm flutter"
+alias dart="fvm dart"
 alias cl="clear"
 alias pbcopy="xclip -selection c"
 alias pbpaste="xclip -selection c -o"
 
 export EDITOR=nvim
 export TERM=xterm-256color
-export PATH="$HOME/.local/bin/:$PATH"
+export PATH="$HOME/.local/bin/:$HOME/.cargo/bin/:$PATH"
 export ZSH="$HOME/.oh-my-zsh"
 export CHROME_EXECUTABLE="/opt/google/chrome/chrome"
 export LIBVA_DRIVER_NAME=nvidia
