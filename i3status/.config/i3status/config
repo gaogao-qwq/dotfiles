@@ -1,6 +1,6 @@
 general {
 	colors = true
-	interval = 5
+	interval = 1
 }
 
 order += "ipv6"
@@ -36,19 +36,19 @@ load {
 }
 
 memory {
-	format = "%used | %available"
-	threshold_degraded = "1G"
-	format_degraded = "MEMORY < %available"
+	format = "%used / %available"
+	threshold_degraded = "2G"
+	format_degraded = "RAM 还剩 %available, 要似了"
 }
 
 volume master {
 	format = "♪: %volume"
-	format_muted = "♪: muted (%volume)"
+	format_muted = "♪: 口球 (%volume)"
 	device = "default"
 	mixer = "Master"
 	mixer_idx = 0
 }
 
 tztime local {
-	format = "%Y-%m-%d %H:%M:%S"
+	format = "时间差不多咯 %Y-%m-%d %H:%M:%S"
 }
