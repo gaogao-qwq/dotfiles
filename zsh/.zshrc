@@ -3,11 +3,11 @@ eval $(keychain --eval --confhost --quiet id_rsa aur id_rsa_gitee)
 alias flutter="fvm flutter"
 alias dart="fvm dart"
 alias cl="clear"
+alias pbin="curl -L -F 'file=@-' 0x0.st"
 alias pbcopy="xclip -selection c"
 alias pbpaste="xclip -selection c -o"
 
 export EDITOR=nvim
-export TERM=xterm-256color
 export PATH="$HOME/.local/bin/:$HOME/.cargo/bin/:$PATH"
 export PATH="$PATH:/home/gaogao-qwq/.local/share/coursier/bin"
 export ZSH="$HOME/.oh-my-zsh"
@@ -174,3 +174,7 @@ complete -o nospace -F _comp_kdesrc_run kdesrc-run
 
 ################################################################################
 
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
