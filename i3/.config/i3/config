@@ -4,6 +4,10 @@ set $mod Mod4
 # Font families
 font pango:Maple Mono, Source Han Sans CN, Source Han Sans JP 10
 
+#################################################
+#            Auto startup programs              #
+#################################################
+
 # Start XDG autostart .desktop files using dex. See also
 # https://wiki.archlinux.org/index.php/XDG_Autostart
 exec --no-startup-id dex --autostart --environment i3
@@ -42,8 +46,16 @@ exec_always --no-startup-id dunst -conf ~/scripts/config/dunst.conf
 # run flameshot screenshot utility
 exec_always --no-startup-id flameshot
 
+exec_always --no-startup-id pamac-daemon
+exec_always --no-startup-id pamac-tray
+exec_always --no-startup-id pamac-checkupdates
+
 # set wallpaper
-exec --no-startup-id feh --bg-fill ~/Pictures/wallpaper/114934269_p0.jpg ~/Pictures/wallpaper/114250707_p0.jpg
+exec_always --no-startup-id feh --bg-fill ~/Pictures/wallpaper/91087868_p0.png ~/Pictures/wallpaper/118213219_p0.jpg
+
+#################################################
+#                   Keybinds                    #
+#################################################
 
 # change wallpaper
 # bindsym $mod+Shift+w exec --no-startup-id feh --randomize --bg-fill ~/Pictures/wallpaper
@@ -54,11 +66,11 @@ bindsym $mod+Shift+s exec --no-startup-id flameshot gui
 bindsym $mod+Shift+z exec --no-startup-id boomer
 
 # Use pactl to adjust volume in PulseAudio.
-set $refresh_i3status killall -SIGUSR1 i3status
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% && $refresh_i3status
-bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
-bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
+# set $refresh_i3status killall -SIGUSR1 i3status
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10%
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10%
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle
+bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -209,10 +221,10 @@ bindsym $mod+r mode "resize"
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
-bar {
-	output DP-0
-	output DP-2
-	# output DP-4
-	position bottom
-	status_command i3status
-}
+# bar {
+# 	output DP-0
+# 	output DP-2
+# 	output DP-4
+# 	position bottom
+# 	status_command i3status
+# }
