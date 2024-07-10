@@ -8,8 +8,7 @@ alias pbcopy="xclip -selection c"
 alias pbpaste="xclip -selection c -o"
 
 export EDITOR=nvim
-export PATH="$HOME/.local/bin/:$HOME/.cargo/bin/:$PATH"
-export PATH="$PATH:/home/gaogao-qwq/.local/share/coursier/bin"
+export PATH="$PATH:$HOME/.local/bin/:$HOME/.cargo/bin/:$HOME/.local/share/coursier/bin"
 export ZSH="$HOME/.oh-my-zsh"
 export CHROME_EXECUTABLE="/opt/google/chrome/chrome"
 export LIBVA_DRIVER_NAME=nvidia
